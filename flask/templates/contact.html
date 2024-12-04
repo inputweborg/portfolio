@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contact">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you. Reach out to us via the form below or schedule a call.</p>
+    <form action="https://formspree.io/f/example" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="schedule-call">
+        <h2>Schedule a Call</h2>
+        <p>Book a time that works for you:</p>
+        <!-- Calendly widget integration -->
+        <div id="calendly-widget">
+            <a href="https://calendly.com/inputwebm/30min" target="_blank">
+                <button class="cta-button"><b>Schedule Now</b></button>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

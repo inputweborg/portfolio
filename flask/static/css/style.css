@@ -1,0 +1,228 @@
+/* Font Import */
+@font-face {
+    font-family: 'Wasted Vindey';
+    src: url('../fonts/WastedVindey.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Body Styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #001f3f, #000, #f5f5dc, #001f3f);
+    background-size: 400% 400%; /* Oversize for smooth animation */
+    animation: moveBackground 20s linear infinite; /* Dynamic moving background */
+    color: #f5f5dc;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-bottom: 40px; /* Ensures content doesn't overlap the fixed footer */
+}
+
+/* Keyframes for the moving background */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* General Text Styling */
+h1, h2, h3, p, a, button, input, textarea {
+    color: inherit; /* Dynamic color based on background */
+    background-color: transparent; /* Blends with background */
+    transition: color 0.3s ease, background-color 0.3s ease;
+	text-align: center;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent for blending */
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5dc;
+    font-family: 'Wasted Vindey', sans-serif;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ff9f00;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #001f3f, #000);
+    transition: background 0.3s ease;
+	background-blend-mode: screen;
+}
+
+.hero h1 {
+    font-family: 'Wasted Vindey', sans-serif;
+    font-size: 3rem;
+    color: inherit;
+}
+
+/* Call to Action Button */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #f5f5dc;
+    color: #001f3f;
+    border: none;
+    text-decoration: none;
+	text-align: center;
+    border-radius: 5px;
+    font-family: 'Wasted Vindey', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e0e0d1;
+    color: #000;
+	text-align: center;
+    transform: translateY(-2px);
+}
+
+/* Sections with Team and Work */
+.team, .work {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-grid, .work-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    transition: gap 0.3s ease;
+}
+
+.team-member, .work-item {
+    background-color: rgba(0, 0, 0, 0.8); /* Blends with background */
+    padding: 20px;
+    border-radius: 10px;
+    color: #f5f5dc;
+    width: 250px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.team-member:hover, .work-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0, 59, 109, 0.9); /* Slightly brighter on hover */
+}
+
+/* Contact Section */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+	background-blend-mode: screen;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+	background-blend-mode: screen;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #ff9f00;
+    outline: none;
+	background-blend-mode: screen;
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 31, 63, 0.8); /* Semi-transparent footer */
+    text-align: center;
+    color: #dcdcdc;
+    font-size: 14px;
+    font-family: 'Wasted Vindey', sans-serif;
+    z-index: 10;
+    backdrop-filter: blur(10px); /* Adds a subtle blur */
+	background-blend-mode: screen;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* About Works Section */
+.about-works {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #000, #001f3f);
+    color: #f5f5dc;
+	background-blend-mode: screen;
+}
+
+.about-works .works-intro h2 {
+    font-family: 'Wasted Vindey', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f5f5dc;
+}
+
+.about-works .works-intro p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    color: #e0e0d1;
+}
+
+.about-works .works-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-works .work-card {
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    color: #f5f5dc;
+    width: 250px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.about-works .work-card:hover {
+    transform: translateY(-5px);
+    background-color: #003b6d;
+}
+
+.about-works .work-card h3 {
+    font-family: 'Wasted Vindey', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.about-works .work-card p {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+}
